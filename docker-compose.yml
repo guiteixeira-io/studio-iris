@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  wordpress:
+  studioiris:
     image: wordpress:latest
     container_name: studioiris-wordpress
     restart: always
@@ -13,9 +13,9 @@ services:
     networks:
       - sigma-net
     depends_on:
-      - db
+      - studioiris-db
 
-  db:
+  studioiris-db:
     image: mariadb:10.6
     container_name: studioiris-db
     restart: always
