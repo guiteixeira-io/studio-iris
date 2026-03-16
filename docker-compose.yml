@@ -1,7 +1,8 @@
 
 services:
   studioiris:
-    image: wordpress:latest
+    image: studioiris-wordpress
+    build: .
     container_name: studioiris-wordpress
     restart: always
     ports:
